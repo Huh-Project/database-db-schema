@@ -3,14 +3,14 @@ import { UserSeed } from "../seed/user.seed";
 import { hash } from "bcrypt";
 import { Users } from "../entity/users.entitiy";
 
-export class seedUser9644319170796 implements MigrationInterface {
-  name = "seedUser9644319170796";
+export class seedUser9999999999901 implements MigrationInterface {
+  name = "seedUser9999999999901";
 
   public async up(queryRunner: QueryRunner): Promise<any> {
     const userRepository = getRepository<Users>("users");
 
     const userSeed = userRepository.create(UserSeed);
-    userSeed.password = await hash(userSeed.password, 10);
+    userSeed.password = userSeed.password;
     await userRepository.save(userSeed);
   }
 
