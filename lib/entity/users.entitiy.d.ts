@@ -1,4 +1,5 @@
-export declare class Users {
+import { BaseEntity } from "typeorm";
+export declare class Users extends BaseEntity {
     static readonly modelName = "Users";
     id: number;
     status: number;

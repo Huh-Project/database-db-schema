@@ -9,7 +9,7 @@ import {
 } from "typeorm";
 
 @Entity("users")
-export class Users {
+export class Users extends BaseEntity {
   static readonly modelName = "Users";
   @PrimaryGeneratedColumn()
   id: number;
